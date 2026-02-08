@@ -8,72 +8,129 @@
     <style>
         :root { --brand-dark: #0f172a; --brand-purple: #7c3aed; --brand-cyan: #06b6d4; }
         body { background-color: var(--brand-dark); color: #f3f4f6; font-family: sans-serif; }
-        /* FIXED: Smaller, responsive font sizes */
-        .prose h1 { font-size: 1.8rem; font-weight: 800; margin-bottom: 1rem; line-height: 1.2; }
-        .prose p { margin-bottom: 1rem; line-height: 1.6; color: #d1d5db; font-size: 1.1rem; }
-        /* FIXED: Glass panel now handles overflow */
-        .glass-panel { background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); overflow-wrap: break-word; }
+        
+        /* The Bento Card Design */
+        .bento-card { 
+            background: rgba(255, 255, 255, 0.03); 
+            border: 1px solid rgba(255, 255, 255, 0.1); 
+            transition: all 0.3s ease; 
+        }
+        .bento-card:hover { 
+            border-color: var(--brand-purple); 
+            transform: translateY(-4px); 
+            box-shadow: 0 10px 30px -10px rgba(124, 58, 237, 0.3);
+        }
+        
+        /* Typography */
+        .prose h1 { font-size: 2.5rem; font-weight: 800; margin-bottom: 1rem; color: white; line-height: 1.1; }
+        .prose p { margin-bottom: 1.25rem; line-height: 1.75; color: #d1d5db; font-size: 1.1rem; }
     </style>
 </head>
 <body class="min-h-screen flex flex-col">
 
-    <header class="border-b border-white/10 bg-black/50 sticky top-0 backdrop-blur-md z-50">
-        <div class="max-w-3xl mx-auto px-4 h-16 flex items-center justify-between">
-            <div class="flex items-center gap-2">
-                <div class="w-8 h-8 bg-gradient-to-br from-purple-600 to-cyan-500 rounded-lg flex items-center justify-center font-bold text-white">R</div>
-                <span class="font-bold text-xl tracking-tight">The Ry-Guy</span>
+    <header class="border-b border-white/10 bg-black/80 sticky top-0 backdrop-blur-md z-50">
+        <div class="max-w-6xl mx-auto px-4 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-gradient-to-br from-purple-600 to-cyan-500 rounded-xl flex items-center justify-center font-bold text-white shadow-lg">R</div>
+                <span class="font-black text-2xl tracking-tighter uppercase italic">The Ry-Guy</span>
             </div>
+            <div class="hidden md:block text-xs font-mono text-cyan-400">STATUS: RTX 3090 ONLINE</div>
         </div>
     </header>
 
-    <main class="flex-grow max-w-3xl mx-auto px-4 py-8 w-full">
-        
-        <div class="mb-8 text-center">
-            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-500/10 border border-purple-500/20 text-purple-400 text-xs font-bold uppercase tracking-wider mb-4">
-                {{CATEGORY}}
-            </div>
-            <h1 class="text-3xl md:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-400 mb-4 leading-tight">
+    <main class="flex-grow max-w-6xl mx-auto px-4 py-12 w-full">
+        <div class="text-center mb-12">
+            <span class="inline-block px-4 py-1 rounded-full bg-purple-500/10 border border-purple-500/20 text-purple-400 text-xs font-bold tracking-widest uppercase mb-4">
+                LIVE FEED
+            </span>
+            <h1 class="text-4xl md:text-6xl font-black text-white mb-4 leading-none tracking-tight">
                 The Ry-Guy Daily Wire
             </h1>
             <div class="text-sm text-gray-500">
-                <time>{{DATE}}</time> • Mukwonago, WI
+                <time>Sunday, February 08</time> • Mukwonago, WI
             </div>
         </div>
 
-        <div class="rounded-xl overflow-hidden mb-8 border border-white/10 shadow-2xl aspect-video relative">
-            <img src="https://loremflickr.com/800/600/wisconsin,sports" alt="Header" class="w-full h-full object-cover opacity-80" />
-        </div>
-
-        <article class="prose max-w-none">
-            <div class="glass-panel p-6 md:p-8 rounded-2xl">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <a href="membersofthemilwaukeebrewerssh.html" class="card">
-            <img src="https://loremflickr.com/1200/800/football,stadium" style="width:100%; border-radius:10px;">
-            <h3>Members of the Milwaukee Brewers show up to the Packers game at Lambeau Field and are wearing cheeseheads - Yahoo Sports</h3>
-        </a>
-        <a href="membersofthemilwaukeebrewerssh.html" class="card">
-            <img src="https://loremflickr.com/1200/800/football,stadium" style="width:100%; border-radius:10px;">
-            <h3>Members of the Milwaukee Brewers show up to the Packers game at Lambeau Field and are wearing cheeseheads - Milwaukee Journal Sentinel</h3>
-        </a>
-        <a href="squareenixunveilsnewtitlesandt.html" class="card">
-            <img src="https://loremflickr.com/1200/800/gaming,neon" style="width:100%; border-radius:10px;">
-            <h3>SQUARE ENIX UNVEILS NEW TITLES AND TRAILERS IN LATEST NINTENDO DIRECT - Square Enix Press</h3>
-        </a>
-        <a href="highonlife2spreloadnowavailabl.html" class="card">
-            <img src="https://loremflickr.com/1200/800/gaming,neon" style="width:100%; border-radius:10px;">
-            <h3>High On Life 2’s pre-load now available on Xbox - XboxEra</h3>
-        </a>
-        <a href="everyupcomingstarwarsmovieands.html" class="card">
-            <img src="https://loremflickr.com/1200/800/wisconsin,winter" style="width:100%; border-radius:10px;">
-            <h3>Every Upcoming Star Wars Movie and Series – With Key Details and Dates! - Rotten Tomatoes</h3>
-        </a>
-        <a href="jasonaaronrevealsstarwarscomic.html" class="card">
-            <img src="https://loremflickr.com/1200/800/wisconsin,winter" style="width:100%; border-radius:10px;">
-            <h3>Jason Aaron Reveals 'Star Wars' Comic Restrictions - Star Wars News Net</h3>
-        </a></div>
+        <div class="w-full">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <a href="membersofthemilwaukeebrewerssh.html" class="bento-card group block overflow-hidden rounded-3xl bg-gray-900 shadow-xl h-full flex flex-col">
+            <div class="h-48 overflow-hidden relative">
+                <img src="https://image.pollinations.ai/prompt/Green%20Bay%20Packers%20american%20football%20player,%20Lambeau%20Field%20stadium,%204k,%20realistic,%20dramatic%20lighting,%20high%20detail?nologo=true&width=1200&height=800" class="w-full h-full object-cover opacity-80 group-hover:scale-110 group-hover:opacity-100 transition-all duration-500">
             </div>
-        </article>
-
+            <div class="p-6 flex-grow flex flex-col">
+                <div class="text-cyan-400 text-xs font-bold uppercase tracking-widest mb-2">The Aftermath</div>
+                <h3 class="text-lg font-bold text-white leading-tight group-hover:text-purple-400 transition-colors mb-4">
+                    Members of the Milwaukee Brewers show up to the Packers game at Lambeau Field and are wearing cheeseheads - Yahoo Sports
+                </h3>
+            </div>
+        </a>
+        
+        <a href="forprosportsglobalmarketsandno.html" class="bento-card group block overflow-hidden rounded-3xl bg-gray-900 shadow-xl h-full flex flex-col">
+            <div class="h-48 overflow-hidden relative">
+                <img src="https://image.pollinations.ai/prompt/Futuristic%20gaming%20setup,%20neon%20lights,%20esports%20tournament,%204k,%20realistic,%20dramatic%20lighting,%20high%20detail?nologo=true&width=1200&height=800" class="w-full h-full object-cover opacity-80 group-hover:scale-110 group-hover:opacity-100 transition-all duration-500">
+            </div>
+            <div class="p-6 flex-grow flex flex-col">
+                <div class="text-cyan-400 text-xs font-bold uppercase tracking-widest mb-2">The Aftermath</div>
+                <h3 class="text-lg font-bold text-white leading-tight group-hover:text-purple-400 transition-colors mb-4">
+                    For pro sports, global markets and non-game days offer opportunity - The Business Journals
+                </h3>
+            </div>
+        </a>
+        
+        <a href="threexboxgamesdatedfornintendo.html" class="bento-card group block overflow-hidden rounded-3xl bg-gray-900 shadow-xl h-full flex flex-col">
+            <div class="h-48 overflow-hidden relative">
+                <img src="https://image.pollinations.ai/prompt/Futuristic%20gaming%20setup,%20neon%20lights,%20esports%20tournament,%204k,%20realistic,%20dramatic%20lighting,%20high%20detail?nologo=true&width=1200&height=800" class="w-full h-full object-cover opacity-80 group-hover:scale-110 group-hover:opacity-100 transition-all duration-500">
+            </div>
+            <div class="p-6 flex-grow flex flex-col">
+                <div class="text-cyan-400 text-xs font-bold uppercase tracking-widest mb-2">The Aftermath</div>
+                <h3 class="text-lg font-bold text-white leading-tight group-hover:text-purple-400 transition-colors mb-4">
+                    Three Xbox Games Dated For Nintendo Switch 2, Starfield Also Rumoured For PS5 In April - Pure Xbox
+                </h3>
+            </div>
+        </a>
+        
+        <a href="thenintendoswitch2canhandleaaa.html" class="bento-card group block overflow-hidden rounded-3xl bg-gray-900 shadow-xl h-full flex flex-col">
+            <div class="h-48 overflow-hidden relative">
+                <img src="https://image.pollinations.ai/prompt/Futuristic%20gaming%20setup,%20neon%20lights,%20esports%20tournament,%204k,%20realistic,%20dramatic%20lighting,%20high%20detail?nologo=true&width=1200&height=800" class="w-full h-full object-cover opacity-80 group-hover:scale-110 group-hover:opacity-100 transition-all duration-500">
+            </div>
+            <div class="p-6 flex-grow flex flex-col">
+                <div class="text-cyan-400 text-xs font-bold uppercase tracking-widest mb-2">The Aftermath</div>
+                <h3 class="text-lg font-bold text-white leading-tight group-hover:text-purple-400 transition-colors mb-4">
+                    The Nintendo Switch 2 Can Handle AAA Games Better Than People Think - Lifehacker
+                </h3>
+            </div>
+        </a>
+        
+        <a href="noonecaresaboutmarvelstarwarso.html" class="bento-card group block overflow-hidden rounded-3xl bg-gray-900 shadow-xl h-full flex flex-col">
+            <div class="h-48 overflow-hidden relative">
+                <img src="https://image.pollinations.ai/prompt/Cinematic%20sports%20photography,%204k,%20realistic,%20dramatic%20lighting,%20high%20detail?nologo=true&width=1200&height=800" class="w-full h-full object-cover opacity-80 group-hover:scale-110 group-hover:opacity-100 transition-all duration-500">
+            </div>
+            <div class="p-6 flex-grow flex flex-col">
+                <div class="text-cyan-400 text-xs font-bold uppercase tracking-widest mb-2">The Aftermath</div>
+                <h3 class="text-lg font-bold text-white leading-tight group-hover:text-purple-400 transition-colors mb-4">
+                    No One Cares About Marvel, Star Wars Or Pixar Anymore Article – My Reaction - LRMonline
+                </h3>
+            </div>
+        </a>
+        
+        <a href="everyupcomingstarwarsmovieands.html" class="bento-card group block overflow-hidden rounded-3xl bg-gray-900 shadow-xl h-full flex flex-col">
+            <div class="h-48 overflow-hidden relative">
+                <img src="https://image.pollinations.ai/prompt/Cinematic%20sports%20photography,%204k,%20realistic,%20dramatic%20lighting,%20high%20detail?nologo=true&width=1200&height=800" class="w-full h-full object-cover opacity-80 group-hover:scale-110 group-hover:opacity-100 transition-all duration-500">
+            </div>
+            <div class="p-6 flex-grow flex flex-col">
+                <div class="text-cyan-400 text-xs font-bold uppercase tracking-widest mb-2">The Aftermath</div>
+                <h3 class="text-lg font-bold text-white leading-tight group-hover:text-purple-400 transition-colors mb-4">
+                    Every Upcoming Star Wars Movie and Series – With Key Details and Dates! - Rotten Tomatoes
+                </h3>
+            </div>
+        </a>
+        </div>
+        </div>
     </main>
+
+    <footer class="border-t border-white/5 bg-black py-12 mt-20 text-center">
+        <p class="text-gray-600 text-xs uppercase tracking-widest">Autonomous Media House • Est. 2026</p>
+    </footer>
+
 </body>
 </html>
