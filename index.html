@@ -1,15 +1,15 @@
-<html><body style='background:#f4f4f4; padding:50px;'><pre style='white-space: pre-wrap; font-family: sans-serif; max-width: 800px; margin: auto;'>**OPENING STRATEGY:**  
-*I’m sitting here in my garage, listening to the Brewers game on AM radio – sounds like they’re getting their clocks cleaned again (typical) – with a warm Spotted Cow sweating into my lap. Just chucked another remote at the wall after the Brewers’ bullpen blew yet another lead. The Packers are playing tonight at Lambeau, and apparently, some of those goddamn baseball rejects showed up wearing cheeseheads? Seriously? Like, what’s next—them trying to tackle Aaron Jones in a game of touch football?*  
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App';
 
-**THE NEWS REACTION:**  
-So the Brewers invaded Lambeau Field yesterday. And they’re wearing *cheeseheads*. As if we needed more proof these guys are delusional enough to believe they’ve earned any goodwill after yet another season of losing. You know, I’m pretty sure the only thing the Brewers and the Packers share is a shared city—and that’s about it. The Packers? A dynasty in the making with Jordan Love finally finding his groove after that 2020 draft night soap opera (remember when we all thought he’d be another bust?). The Brewers? Still figuring out if they’re actually a team or just a collection of guys who showed up late to a keg party.  
+const rootElement = document.getElementById('root');
+if (!rootElement) {
+  throw new Error("Could not find root element to mount to");
+}
 
-The whole thing’s laughable. Cheeseheads are for fans, not for dudes who can’t even make it into the playoffs. Hell, Bango, that goofy Bucks mascot from ’77, probably has more credibility than these guys right now. At least he wasn’t drafted in a three-year dumpster fire of a soap opera like Jordan Love was—you’d think they’d stick to what actually works.  
-
-**GAME NOTES:**  
-Square Enix dropping new titles in the Nintendo Direct? Cool, I guess. Another batch of Star Wars and Marvel rumors flooding our feeds? Sure, whatever. It’s all background noise when your city’s sports teams are this pathetic. At least there’s always video games to drown out the disappointment—though honestly, even a perfect 10/10 game can’t make me forget that Brewers’ bullpen last night.  
-
-**FINAL THOUGHT:**  
-So yeah, if you’re one of those cheesehead-wearing Brewers who showed up at Lambeau trying to act like a fan: stick to the baseball diamond and maybe quit while you’re behind. Packer fans don’t need your “support.” We’ve got Love leading us to glory now—you’re still figuring out how to throw strikes in April.  
-
-*—The Wisconsin One-Ry-Sports-Guy (drinking alone, as usual)*</pre></body></html>
+const root = ReactDOM.createRoot(rootElement);
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
