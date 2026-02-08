@@ -1,15 +1,107 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import App from './App';
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OPENING STRATEGY: The 'Ref's Perspective'. Start by comparing the news to a specific blown call you saw in a high school game 10 years ago. Back when I was still a ref for Friday Night Lights, there was this one game at West Allis Central where I missed what looked like an obvious pass interference on the goal line with under two minutes left. The kid who should've scored just stood there staring at me as if to say "How could you screw this up?" Well, it's Sunday and once again **the refs (or in this case, the Brewers) are making headlines for all the wrong reasons.** | The Ry-Guy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom "Ry-Guy" Brand Colors */
+        :root {
+            --brand-dark: #0f172a;
+            --brand-purple: #7c3aed;
+            --brand-cyan: #06b6d4;
+        }
+        body { background-color: var(--brand-dark); color: #f3f4f6; font-family: sans-serif; }
+        .prose h1 { font-size: 2.25rem; font-weight: 800; margin-bottom: 1.5rem; line-height: 1.1; }
+        .prose h2 { font-size: 1.5rem; font-weight: 700; margin-top: 2rem; margin-bottom: 1rem; color: var(--brand-cyan); }
+        .prose p { margin-bottom: 1.25rem; line-height: 1.75; color: #d1d5db; }
+        .prose ul { list-style-type: disc; padding-left: 1.5rem; margin-bottom: 1.25rem; }
+        .prose strong { color: white; font-weight: 700; }
+        .glass-panel { background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
 
-const rootElement = document.getElementById('root');
-if (!rootElement) {
-  throw new Error("Could not find root element to mount to");
-}
+    <header class="border-b border-white/10 bg-black/50 sticky top-0 backdrop-blur-md z-50">
+        <div class="max-w-4xl mx-auto px-4 h-16 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+                <div class="w-8 h-8 bg-gradient-to-br from-purple-600 to-cyan-500 rounded-lg flex items-center justify-center font-bold text-white">R</div>
+                <span class="font-bold text-xl tracking-tight">The Ry-Guy</span>
+            </div>
+            <nav class="hidden md:flex gap-6 text-sm font-medium text-gray-400">
+                <a href="#" class="hover:text-cyan-400 transition">Packers</a>
+                <a href="#" class="hover:text-cyan-400 transition">Bucks</a>
+                <a href="#" class="hover:text-cyan-400 transition">Gaming</a>
+            </nav>
+        </div>
+    </header>
 
-const root = ReactDOM.createRoot(rootElement);
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+    <main class="flex-grow max-w-4xl mx-auto px-4 py-12 w-full">
+        
+        <div class="mb-10 text-center">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-500/10 border border-purple-500/20 text-purple-400 text-xs font-bold uppercase tracking-wider mb-6">
+                3090 Reports
+            </div>
+            <h1 class="text-4xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-400 mb-6 leading-tight">
+                OPENING STRATEGY: The 'Ref's Perspective'. Start by comparing the news to a specific blown call you saw in a high school game 10 years ago. Back when I was still a ref for Friday Night Lights, there was this one game at West Allis Central where I missed what looked like an obvious pass interference on the goal line with under two minutes left. The kid who should've scored just stood there staring at me as if to say "How could you screw this up?" Well, it's Sunday and once again **the refs (or in this case, the Brewers) are making headlines for all the wrong reasons.**
+            </h1>
+            <div class="flex items-center justify-center gap-4 text-sm text-gray-500">
+                <div class="flex items-center gap-2">
+                    <div class="w-8 h-8 rounded-full bg-gray-700 overflow-hidden">
+                        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=RyGuy" alt="Ry-Guy" />
+                    </div>
+                    <span class="text-gray-300 font-medium">The Ry-Guy</span>
+                </div>
+                <span>•</span>
+                <time>Sunday, February 08, 2026</time>
+                <span>•</span>
+                <span>Mukwonago, WI</span>
+            </div>
+        </div>
+
+        <div class="rounded-2xl overflow-hidden mb-12 border border-white/10 shadow-2xl shadow-purple-900/20 aspect-video relative group">
+            <div class="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-60"></div>
+            <img src="https://loremflickr.com/1200/800/wisconsin,sports" alt="Featured" class="w-full h-full object-cover" />
+            <div class="absolute bottom-6 left-6 right-6">
+                <p class="text-white/80 italic text-lg font-serif">"Fresh Mukwonago grit, hot off the wires."</p>
+            </div>
+        </div>
+
+        <article class="prose max-w-none">
+            <div class="glass-panel p-8 md:p-12 rounded-2xl">
+                First up: Members of the Milwaukee Brewers show up to the Packers game at Lambeau Field and are wearing cheeseheads - Yahoo Sports.
+Yep, just what we need – baseball players showing up to a football game wearing cheeseheads like they own the joint. It's bad enough they're trying to cash in on our city's NFL glory; now they think it’s cool to wear their opponent's gear? Unbelievable!
+
+And here’s more about it: Members of the Milwaukee Brewers show up to the Packers game at Lambeau Field and are wearing cheeseheads - Milwaukee Journal Sentinel.
+I guess the Brew Crew just loves rubbing it in our faces with this stunt. If you want to support a team, do it right by buying your own tickets – not stealing ours!
+
+Next: High On Life 2’s pre-load now available on Xbox - XboxEra.
+Finally, gamers get their fix of “High On Life” again! Let's hope this sequel isn’t as disappointing as the last Brewers season was (we’re looking at you, Yelich and Suter). Pre-load away!
+
+And here’s what Square Enix has to say: SQUARE ENIX UNVEILS NEW TITLES AND TRAILERS IN LATEST NINTENDO DIRECT - Square Enix Press.
+Square Enix keeps making us wait for new games, but hey, at least it looks like they finally have something worth playing again! Bring on the trailers and let's see what kind of magic they're cooking up this time around.
+
+Now this one hits close to home: Disney+ Dead: Marvel, Star Wars Broke Confirms Tony Gilroy - Cosmic Book News.
+RIP Disney+, you won't be missed by me anyway... especially after seeing those terrible new episodes of “WandaVision” last season! But really? Another streaming service bites the dust? Yeesh, just when we thought things couldn't get any worse for Marvel fans out there.
+
+And finally: Upcoming Marvel movies and shows for 2026 and beyond: Every new MCU release we know about - GamesRadar+.
+So now that Disney+ is gone, where do all those future Marvel releases go? I guess we'll have to wait and see what happens next in this crazy world of superheroes... or maybe not. Who knows how long it’ll be before they cancel everything again!
+            </div>
+        </article>
+
+    </main>
+
+    <footer class="border-t border-white/10 bg-black py-12 mt-12">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <p class="text-gray-500 text-sm mb-4">
+                Powered by an RTX 3090, Spotted Cow, and pure cynicism.
+            </p>
+            <p class="text-gray-700 text-xs">
+                &copy; 2026 One-Ry Sports. Built in Mukwonago.
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
